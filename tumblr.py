@@ -3,7 +3,7 @@ import json
 from pytumblr import TumblrRestClient
 import PyTumblrFile
 
-blogName = "diaperben"
+blogName = "benlue"
 
 client = TumblrRestClient(
     creds['consumer_key'],
