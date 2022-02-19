@@ -4,6 +4,7 @@ shopt -u nullglob
 #unsetopt nomatch
 
 MEDIA_DIR='/home/benlue/Scripts/MeinUploadScript/Media/Urlaub/'
+TUMBLR_STATE='\"draft\"'
 
 # Frankreich Clips
 FR_EMOJI=🇫🇷
