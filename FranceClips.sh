@@ -9,8 +9,8 @@ if [ -d "$MEDIA_DIR${DPG_DIR}" ]; then
         echo "### The following data were determined by means of a loop ###"
         ls -lah "$file"
         echo ""
-        DATA=($(jq '.'$1 ./host.json))
-        RESULT=($(echo "${DATA[@]}" | jq -r '.result'))
+        DATA=$(jq '.' ./host.json)
+        RESULT=$(echo "${DATA[@]}" | jq -r '.result')
 
         echo "### Current Doodstream Node ###"
         jq <./host.json '.result'
@@ -27,9 +27,9 @@ if [ -d "$MEDIA_DIR${DPG_DIR}" ]; then
         ffmpeg -y -i "${file}" -ss 00:00:10 -frames:v 1 "${SCREENSHOT_NAME}"
 
         echo "### Generate Tumblr post request ###"
-        DATA=($(jq '.'$1 dl.json))
-        DL_LINK=($(echo "$DATA" | jq '.result[] .protected_dl'))
-        TUMBLRDATA=($(echo $DATA | jq -r '.result[] | "client.create_photo((blogName), state=\"'"$TUMBLR_STATE"'\", tags=[\"'"$TUMBLR_DPG_HTAGS"'\"], format=\"html\", source=\"" + .single_img + "\", " + " caption=\"'"$DPG_EMOJI"'\" <h2>" + .title + "</h2><br><br> 🎥 <a href=" + .protected_dl + ">Watch Clip</a> 🎥 <br><br> 🐦 <a href='https://twitter.com/USER'> Follow me on Twitter </a> \") " '))
+        DATA=$(jq '.' dl.json)
+        DL_LINK=$(echo "$DATA" | jq '.result[] .protected_dl')
+        TUMBLRDATA=$(echo "$DATA" | jq -r '.result[] | "client.create_photo((blogName), state=\"'"$TUMBLR_STATE"'\", tags=[\"'"$TUMBLR_DPG_HTAGS"'\"], format=\"html\", source=\"" + .single_img + "\", " + " caption=\"'"$DPG_EMOJI"'\" <h2>" + .title + "</h2><br><br> 🎥 <a href=" + .protected_dl + ">Watch Clip</a> 🎥 <br><br> 🐦 <a href='https://twitter.com/USER'> Follow me on Twitter </a> \") " ')
         echo "$TUMBLRDATA" | tee >>./PyTumblrFile.txt
 
         echo "### Upload screenshot to Twitter ###"
@@ -38,7 +38,7 @@ if [ -d "$MEDIA_DIR${DPG_DIR}" ]; then
         #    -F media | python3 -c "import sys, json, requests; print(json.load(sys.stdin)['media_id'])")
 
         echo "### Generate Twitter post request ###"
-        #TWITTERDATA=($(echo "$DATA" | jq -r '.result[] | " twurl tweet -d '"$DPG_EMOJI"' " + .title + " 🎥 " + .protected_dl + " '"$TWITTER_DPG_HTAGS"' " '))
+        #TWITTERDATA=$(echo "$DATA" | jq -r '.result[] | " twurl tweet -d '"$DPG_EMOJI"' " + .title + " 🎥 " + .protected_dl + " '"$TWITTER_DPG_HTAGS"' " ')
         #echo "$TWITTERDATA" | tee >>./Twitter.txt
 
         echo "### Tweet Clipfile ###"
