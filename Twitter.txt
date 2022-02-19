@@ -1,0 +1,3 @@
+ twurl tweet -d 🇫🇷 Paris en une minute   visite de la ville de l'amour (364p 24fps H264-128kbit AAC) 🎥 https://dood.ws/d/7t1ckuhu05srzq8tbwbg1hwxv7tc977o #france #francetourism #frankreich #europe #visitfrance #greatshots #travel #francetravel #paris 
+ twurl tweet -d 🇩🇪 REUSSIR SON SEJOUR A BERLIN (360p 25fps H264-128kbit AAC) 🎥 https://dood.ws/d/r0r4isl4bn7qy3lxh1higyxt6lc9zf33 #germany #germanytourism #deutschland #europe #visitgermany #greatshots #travel #germanytravel #berlin 
+ twurl tweet -d 🇨🇭 Basel City 🎥 https://dood.ws/d/mgfc1zsrdsqzhqg1phekqr4j70ublp15 #swiss #swisstourism #schweiz #europe #visitswiss #greatshots #travel #germanyswiss #basel 
