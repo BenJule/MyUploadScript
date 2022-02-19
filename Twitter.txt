@@ -1,0 +1,3 @@
+ twurl tweet -d 🇫🇷 Bulli Tour durch Frankreich 🎥 https://dood.ws/d/ranae0zdofyqw4fxcl54aydvjxmkw3g6 #france #francetourism #frankreich #europe #visitfrance #greatshots #travel #francetravel #paris 
+ twurl tweet -d 🇩🇪 Berlin 🎥 https://dood.ws/d/t8thk0zevjd0bffnabga59tppabpk35l #germany #germanytourism #deutschland #europe #visitgermany #greatshots #travel #germanytravel #berlin 
+ twurl tweet -d 🇨🇭 Basel City 🎥 https://dood.ws/d/bzii4h2e17u5niq69vsscf3wrbo71ib9 #swiss #swisstourism #schweiz #europe #visitswiss #greatshots #travel #germanyswiss #basel 
