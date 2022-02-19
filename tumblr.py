@@ -2,7 +2,7 @@ import json
 from pytumblr import TumblrRestClient
 from pprint import pprint
 
-blogName = "diaperben"
+blogName = "benlue"
 
 creds = json.load(open('./creds.json'))
 
