@@ -1,9 +1,10 @@
- 
 import json
 from pytumblr import TumblrRestClient
-import PyTumblrFile
+from pprint import pprint
 
-blogName = "benlue"
+blogName = "diaperben"
+
+creds = json.load(open('./creds.json'))
 
 client = TumblrRestClient(
     creds['consumer_key'],
@@ -12,4 +13,5 @@ client = TumblrRestClient(
     creds['access_token_secret'],
 )
 
-client.create_photo((blogName), state=""draft"", tags=[""swiss", "swisstourism", "schweiz", "europe", "visitswiss", "greatshots", "travel", "swisstravel", "basel""], format="html", source="https://img.doodcdn.com/snaps/7c28yfq1cg0uy4w3.jpg",  caption="🇨🇭" <h2>Basel City</h2><br><br> 🎥 <a href=https://dood.ws/d/78ijz2igj69lo227fl4qrsoimb0yaqgw>Watch Clip</a> 🎥 <br><br> 🐦 <a href=https://twitter.com/USER> Follow me on Twitter </a> ")
+client.create_photo(blogName, state="published", tags=["testing", "ok"],
+                    source="https://68.media.tumblr.com/b965fbb2e501610a29d80ffb6fb3e1ad/tumblr_n55vdeTse11rn1906o1_500.jpg")
