@@ -29,7 +29,7 @@ if [ -d "$MEDIA_DIR" ]; then
         echo "### Generate Tumblr post request ###"
         DATA=$(jq "." dl.json)
         DL_LINK=$(echo "$DATA" | jq '.result[] .protected_dl')
-        TUMBLRDATA=$(echo "$DATA" | jq -r '.result[] | "client.create_photo((blogName), state=\"'"$TUMBLR_STATE"'\", tags=[\"'"$TUMBLR_DPG_HTAGS"'\"], format=\"html\", source=\"" + .single_img + "\", " + " caption=\"'"$DPG_EMOJI"'\" <h2>" + .title + "</h2><br><br> 🎥 <a href=" + .protected_dl + ">Watch Clip</a> 🎥 <br><br> 🐦 <a href='https://twitter.com/USER'> Follow me on Twitter </a> \") " ')
+        TUMBLRDATA=$(echo "$DATA" | jq -r '.result[] | "client.create_photo((blogName), state=\"'"$TUMBLR_STATE"'\", tags=[\"'"$TUMBLR_FR_HTAGS"'\"], format=\"html\", source=\"" + .single_img + "\", " + " caption=\"'"$FR_EMOJI"'\" <h2>" + .title + "</h2><br><br> 🎥 <a href=" + .protected_dl + ">Watch Clip</a> 🎥 <br><br> 🐦 <a href='https://twitter.com/USER'> Follow me on Twitter </a> \") " ')
         echo "$TUMBLRDATA" | tee >>./PyTumblrFile.txt
 
         echo "### Upload screenshot to Twitter ###"
