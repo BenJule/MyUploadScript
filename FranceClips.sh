@@ -1,7 +1,8 @@
 #!/bin/bash
 # FranceClips Clips
 if [ -d "$MEDIA_DIR" ]; then
-    for file in "$MEDIA_DIR${FR_DIR}"/**/*.mp4; do
+    #for file in "$MEDIA_DIR${FR_DIR}"/**/*.mp4; do
+    find "${MEDIA_DIR}/${FR_DIR}" -name "*.mp4" -type f
         echo "Processing $file file..."
         echo "### Determine the available node of Doodstream.com ###"
         curl -X GET https://doodapi.com/api/upload/server?key="$DOODSTREAM_API" | tee ./host.json
